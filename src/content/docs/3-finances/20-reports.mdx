@@ -1,0 +1,56 @@
+---
+title: Reports & analytics
+description: The seven reports — P&L by property/room/owner plus occupancy, ADR/RevPAR, channels and bookings — and the controls inside each.
+updated: 2026-07-20
+---
+import Callout from '../../../components/Callout.astro';
+
+The **Reports** area turns your synced bookings and recorded expenses into the numbers you run the business on. The landing page opens with **this month's** KPI tiles (revenue, expense, profit, margin), a **6-month** revenue-vs-expense chart and your **top properties** — then a grid of reports in two groups.
+
+![The Reports landing page — Finance · P&L and Operational performance](/assets/sc-reports-index.png)
+
+## Finance · P&L
+
+- **P&L by Property** — revenue, direct + allocated cost, profit and margin for every property, as a sortable table with a **per-property drill-down** and the full **P&L statement**.
+- **P&L by Room** — the same, down to each room: per-room revenue and allocated cost. Drill into a room for its **daily cash flow, revenue, expenses and bookings**.
+- **P&L by Owner** — profit grouped by owner, with each owner's **share computed from their contract terms** — the basis for [payouts](/docs/finances/wallet-payouts).
+
+## Operational performance
+
+- **Occupancy Report** — room-night occupancy across the portfolio.
+- **ADR / RevPAR Analytics** — average daily rate and revenue per available room.
+- **Channel Performance** — revenue mix, commission and net per channel.
+- **Booking analytics** — cancellation rate, booking lead time and guest mix.
+
+<Callout type="note" title="What booking analytics can show">
+GoHost doesn't send guest age or gender, so Booking analytics reports **country, guest mix and segment** only.
+</Callout>
+
+## What you can do inside a report
+
+Open any report and you get a consistent toolbar across the top:
+
+- **Select properties** — narrow to one, a few, or *All properties*.
+- **Date range** — pick the reporting period.
+- **Compare** — on the P&L reports, switch between *Off*, *Prev period* and *Last year*; on the operational reports, use **Compare periods**. This puts two periods side by side.
+- **Export** — download as **CSV, Excel or PDF**.
+
+![P&L report: the property/room breakdown you can sort, drill into and export](/assets/sc-reports-pnl.png)
+
+Inside the P&L tables you can also:
+
+- **Sort** any column — Revenue, Direct cost, Allocated cost, Profit, Margin, Occupancy %.
+- **Click a property or room** to drill into its detail.
+- **Lock a period** (the 🔒 button on a row) to freeze those numbers so a later sync or edit can't change a closed month.
+
+<Callout type="warning" title="Booking analytics is the exception">
+Booking analytics has a **date range only** — no Compare and no Export. Every other report supports both.
+</Callout>
+
+<Callout type="tip" title="Room-level truth">
+P&L by Room is only as accurate as your cost tagging. Attribute expenses to rooms — directly or via [allocation rules](/docs/finances/expenses) — so allocated cost lands where it belongs.
+</Callout>
+
+<Callout type="note">
+Reports read from live data. If a figure looks off, it's usually upstream: an unmapped GoHost property, a flagged booking, or an expense missing its room/property tag.
+</Callout>

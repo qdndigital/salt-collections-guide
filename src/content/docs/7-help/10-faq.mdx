@@ -1,0 +1,56 @@
+---
+title: FAQ & troubleshooting
+description: Quick answers to the most common SaltCollections questions.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+## Bookings aren't showing up
+
+Bookings come from **GoHost sync**, not manual entry. Check, in order:
+
+1. **GoHost Sync → Logs** — did the last run fail? (Usually an expired API key.)
+2. **Mapping** — is the GoHost property mapped to a SaltCollections property?
+3. **Range re-sync** — pull the missing date range manually.
+
+See [GoHost sync](/docs/properties-bookings/gohost-sync).
+
+## The dashboard is empty
+
+A new setup fills in once (a) GoHost sync brings in bookings and (b) you start entering expenses. Empty cards mean *no data yet*, not an error.
+
+## My P&L by room looks wrong
+
+Room-level profit needs costs attributed to rooms. Expenses tagged only to a property (or not at all) won't appear per room. Use the **room** field on expenses, or set up **allocation rules** for shared costs. See [Expenses](/docs/finances/expenses).
+
+## An owner's balance looks off
+
+Owner balances are computed from the **contract** terms against actual revenue and expenses. Check the owner's [contract](/docs/properties-bookings/properties) — share %, fixed amount, dates — and that all their bookings and expenses are recorded.
+
+## I can't see a menu item
+
+Menus follow your **role and permissions**. If you need access you don't have, ask an admin to adjust your [role](/docs/administration/users-roles).
+
+## How do I switch to Vietnamese?
+
+**Account menu → Profile settings → Language**. It's saved to your account.
+
+## I forgot my password / I'm locked out
+
+The **Forgot password?** screen doesn't email a reset link yet, so it won't get you back in. Ask an **administrator** to open your account under **Users → Reset password** — they'll get a one-time temporary password to give you. Sign in with it, then set your own under **Profile settings**. If you're still signed in and just want to change it, go straight to **Profile settings → Password**.
+
+## I lost my 2FA device
+
+There are no printed backup codes. Ask an **administrator to reset 2FA** on your account, then re-enrol a new device from **Profile settings**.
+
+## Can owners see other owners' data?
+
+No. The [Owner Portal](/docs/owner-portal/overview) is strictly scoped — each owner sees only their own properties, reports and payouts.
+
+## Why can't I delete an expense/booking?
+
+By design. Financial records are kept for audit. Instead of deleting, you change **status** — e.g. **reject** or **void** an expense with a reason — and records can be **locked**. Everything stays traceable in the [audit log](/docs/administration/settings-security).
+
+<Callout type="tip" title="Still stuck?">
+Email **hi@qdn.vn** with what you were doing, what you expected, and a screenshot. We reply within one business day.
+</Callout>

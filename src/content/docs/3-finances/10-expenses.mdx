@@ -1,0 +1,63 @@
+---
+title: Expenses
+description: Record invoices with line items and VAT, allocate costs, automate recurring bills, and import in bulk.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+Expenses are the other half of your P&L. SaltCollections captures each supplier **invoice** — with line items, VAT and an allocation to the properties/rooms that incurred it — so profit reports are accurate down to the room.
+
+![The expenses list](/assets/sc-expenses.png)
+
+## Recording an expense
+
+Go to **Expenses → New**. The form is a short guided sequence:
+
+![The new-expense form: vendor info, then the invoice line-items editor](/assets/sc-expense-new.png)
+
+1. **Info** — pick the **vendor**, set the **incurred date** (required), and optionally the **invoice number** and **paid date**.
+2. **Invoice** — choose a **category**, then add **line items**. Each line has a description, quantity, unit price and VAT %. SaltCollections totals the **subtotal**, **VAT amount** and **amount** for you — you don't type a single "amount" figure, it's built from the lines. Use **VAT for whole invoice** to apply one rate across every line at once.
+3. **Description & tags** — a note and any tags for searching later.
+4. **Allocation** — choose where the cost lands, cascading **Company → Building → Room**. Leave it empty to keep the expense at company level; pick rooms to split it across them.
+
+<Callout type="note" title="Receipts live on the expense page">
+Attach receipts/documents from the **expense detail page** after saving (not on the create form). Open the expense and use its attachments section.
+</Callout>
+
+## Expense status, not delete
+
+Expenses aren't deleted — they move through a **status lifecycle**: *Draft → Pending approval → Approved → Paid*, or *Rejected* / *Void*. Instead of deleting a wrong expense you **reject it with a reason** or void it, and you can **lock/unlock** or **re-allocate** an expense. This keeps a complete, auditable financial history.
+
+## Categories & vendors
+
+Under **Categories & Vendors** (master data) you manage:
+
+- **Expense categories** — the groups spending rolls up into. **Expenses → By category** shows spending per group.
+- **Vendors** — suppliers reused across expenses.
+
+## Allocation rules & share charges
+
+Two tools handle costs that don't belong to a single room or property:
+
+- **Allocation rules** — saved, reusable **per-room split templates** for one property. Build a split once (e.g. divide a bill across a property's rooms) and reapply it from the expense form instead of re-entering it each time.
+- **Share charges** — period **batches** that distribute a shared operating cost **across several properties** for a period (draft, then commit). Use these for costs spanning multiple sites — regional overhead, shared staff.
+
+<Callout type="tip" title="Utilities">
+Use **Expenses → Bulk utility** to enter a batch of utility readings/bills at once instead of one screen at a time.
+</Callout>
+
+## Recurring expenses
+
+Fixed bills — rent, subscriptions, salaries — don't need re-keying. Under **Recurring expenses**, create a template with the amount and schedule. Generated entries land as **Draft**: either flip on **auto-create** for the template, or press **Generate now** to create them on demand, then review and approve.
+
+## Importing expenses
+
+Have a spreadsheet of costs? Use **Expenses → Import**:
+
+1. Download the import **template** (available as **CSV or Excel**).
+2. Fill it in, keeping the columns intact.
+3. Upload it and review the preview before confirming.
+
+<Callout type="note">
+Amounts are handled with exact decimal precision in VND — no rounding surprises on VAT or splits.
+</Callout>

@@ -1,0 +1,55 @@
+---
+title: Bookings & calendar
+description: View, lock and flag bookings; use the calendar; assign unrouted imports; block rooms.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+Bookings are the heartbeat of your revenue. Most of them arrive **automatically from GoHost** — SaltCollections keeps its own copy so you can attach payments, notes and financial detail the PMS doesn't hold.
+
+## The bookings list
+
+Under **Bookings** you get every reservation with guest, property, room, channel, dates, amount, status and payment status.
+
+![The bookings list with filters and status badges](/assets/sc-bookings.png)
+
+Narrow the list with the search box and the **All properties / All status / All payment / All channels** dropdowns, a **check-in → check-out** date range, and the **Flagged** and **Conflict** toggles. Save a filter set with **Save current** to reuse it later. **Export CSV** downloads the current view; **Calendar** opens the calendar.
+
+## The booking record
+
+Open a booking and it's a **single scrolling page** (no tabs):
+
+- A **lock banner** at the top — *"Not locked — sync may overwrite this data"* — with a **Lock** button. Lock a booking to protect your manual edits from being overwritten on the next sync.
+- A **header** with channel, booking code, guest, room, guest count and status.
+- **Check-in / check-out** with nights and room.
+- A **finance strip** — *Total payable*, *Paid*, *Balance*, *Net*, *Commission*.
+- **Guest contact**, an **Activity** timeline, and **Extra services & items** (add a service or minibar item to the booking).
+- **Notes & flag** — leave an **internal note**, or **flag** the booking with a reason for the team to review (and unflag it later).
+
+![A booking detail page — one scrolling page, no tabs](/assets/sc-booking-detail.png)
+
+<Callout type="tip" title="Lock what you edit">
+If you hand-correct a synced booking, **lock** it first. Otherwise the next GoHost sync can overwrite your changes.
+</Callout>
+
+## Booking calendar
+
+**Bookings → Calendar** shows occupancy visually across rooms and dates — handy for spotting gaps, overlaps and upcoming check-ins at a glance.
+
+## Booking review (unrouted imports)
+
+When GoHost sync can't work out which property or room a booking belongs to, it parks it in **Booking review** instead of guessing. These rows are marked *no room* or *ambiguous*. Open the queue and **assign** each one to the right building/property so it flows into your reports.
+
+<Callout type="warning" title="Clear the review queue">
+Bookings sitting in review aren't attributed to a property yet — so they're missing from that property's revenue and reports. Assign them promptly.
+</Callout>
+
+## Room blocks
+
+Need to take a room off-market — maintenance, owner stay, deep clean? Use **Room blocks → New** to block dates so they're excluded from availability and don't distort occupancy figures.
+
+## Where bookings come from
+
+<Callout type="note">
+You normally **don't create bookings by hand** — they sync from GoHost. If bookings aren't appearing, check **[GoHost sync](/docs/properties-bookings/gohost-sync)** first.
+</Callout>

@@ -1,0 +1,33 @@
+---
+title: Maintenance
+description: Log maintenance requests, assign a vendor, push cost to expenses, and run preventive schedules.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+The **Maintenance** area keeps properties in good shape — both the things that break and the upkeep you plan ahead.
+
+![The Maintenance area](/assets/sc-maintenance.png)
+
+## Maintenance requests
+
+When something needs fixing, go to **Maintenance → New** and capture:
+
+- **Title** and **description** of the issue.
+- The **property** it's at. (A room/building selector just narrows the asset picker — it isn't stored on the request.)
+- Optionally the **asset unit(s)** affected, and up to **5 photos**.
+- A **priority**.
+
+You **assign** and **track status** afterwards from the request's own page — they aren't set on the create form.
+
+### Assigning and closing out
+
+Open a request to move it through its workflow. **Assign** hands it to a **vendor** (the supplier who'll do the work). When work is done and billed, attach the cost — SaltCollections creates a matching **expense** (source *Maintenance*, status *Pending approval*) against the property, so maintenance spend flows straight into your [P&L](/docs/finances/reports).
+
+## Preventive schedules
+
+**Maintenance → Schedules** covers recurring upkeep — servicing air-con, testing alarms, deep cleans. Create a schedule with a **property**, **title**, **description**, **frequency** and **next due date**, and SaltCollections generates the due requests automatically so nothing slips.
+
+<Callout type="note">
+Upcoming and overdue maintenance can trigger [notifications](/docs/operations/notifications) so the right person is reminded in time.
+</Callout>

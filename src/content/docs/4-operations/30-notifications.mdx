@@ -1,0 +1,47 @@
+---
+title: Notifications & alerts
+description: Stay on top of what needs action — choose channels, set quiet hours, and configure alert rules.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+SaltCollections tells you when something needs attention — an overdue payment, a stock-out, an unusual utility bill — instead of you having to go looking. Alerts appear in-app and can also reach you by email, SMS/Zalo and browser push.
+
+## Your notifications
+
+The **Notifications** screen is your inbox of things that happened. You can:
+
+- **Mark read** / **Mark all read**
+- **Acknowledge** an alert you've actioned
+
+The unread count sits in the top bar (the bell icon) so nothing gets lost.
+
+## Preferences
+
+![Notification preferences: channels and quiet hours per type](/assets/sc-notif-settings.png)
+
+Under **Notifications → Settings**, tune what reaches you and how — per notification type:
+
+- Turn each **notification type** on or off.
+- Choose **channels** for it — **In-app**, **Email**, **SMS**, **Zalo OA**, or **Browser** (web push). SMS and Zalo are separate channels.
+- Set **quiet hours** on that type to silence it overnight.
+
+<Callout type="note" title="Critical always gets through">
+Quiet hours apply to SMS, Zalo and Browser push — **except** for **Critical** severity alerts, which always come through.
+</Callout>
+
+### Browser notifications
+
+To get web push, enable **Browser notifications** in settings and allow the permission prompt. You can unsubscribe any time.
+
+## Alert rules
+
+Admins control *when* alerts fire under **Alerts → Rules**. The system ships with a set of pre-seeded rules — for example "booking overdue N days after check-in" or "item below minimum". For each rule you can **toggle it active/inactive** and **edit its conditions**. Rules run on a schedule and generate notifications through the channels above.
+
+<Callout type="note" title="Two separate things">
+The dashboard's **Action needed** panel is computed independently from fixed conditions — it isn't driven by these alert rules. Alert rules feed the **notification** system (inbox, email, SMS, etc.), not that panel.
+</Callout>
+
+<Callout type="tip" title="Tune the noise">
+If a team is getting too many alerts, adjust a **rule's conditions** rather than switching notifications off — you keep the signal without the fatigue.
+</Callout>

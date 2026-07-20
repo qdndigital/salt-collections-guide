@@ -1,0 +1,34 @@
+---
+title: Users & roles
+description: Invite team members, assign roles, and control what each role can do.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+Administrators decide who's on the team and what they can touch. This lives under **Users** and **Roles**.
+
+## Users
+
+Under **Users → New user**, add a team member with their **name**, **email**, an initial **password** and a **role**.
+
+![The Users list](/assets/sc-users.png)
+
+Open a user to change their **role**, **deactivate** them when they leave (their history stays intact), or **Reset password**.
+
+<Callout type="note" title="Resetting a locked-out user">
+**Reset password** on a user's page generates a **random temporary password shown only once** — copy it and hand it to the user over a trusted channel. They sign in with it and set their own under **Profile settings**. This is currently the way to recover a locked-out account: the self-service *Forgot password?* email isn't wired up yet.
+</Callout>
+
+<Callout type="warning" title="Least privilege">
+Give each person the narrowest role that lets them do their job. Accountants rarely need user administration; ops staff rarely need payout approval.
+</Callout>
+
+## Roles & permissions
+
+**Roles** control *what* a user can see and do. SaltCollections ships with roles matching the common jobs — **Super Admin**, **Manager**, **Accountant**, **Operations Staff** and **Property Owner** — and you can create your own under **Roles → New**.
+
+Each role is a set of **permissions** across the features (bookings, expenses, reports, wallet, inventory, users…). Edit a role to grant or revoke permissions; changes apply to everyone with that role.
+
+## Approval thresholds
+
+Some actions — big expenses, large payouts — should need a second pair of eyes. Under **Settings → Approval thresholds**, set the amounts above which an action requires approval before it goes through (thresholds are configured per role).

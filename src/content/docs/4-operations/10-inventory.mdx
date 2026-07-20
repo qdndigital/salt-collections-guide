@@ -1,0 +1,59 @@
+---
+title: Inventory & assets
+description: Track consumables, minibar and assets; move stock; count cycles; raise purchase orders.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+The **Inventory** area tracks the physical things your properties run on — consumables, minibar stock and fixed assets — with stock levels, movements and low-stock alerts per property.
+
+![The Inventory overview](/assets/sc-inventory.png)
+
+## Items & stock
+
+- **Items** — your catalog of consumables, minibar products and asset items, organized by category.
+- **Stock** — current quantity of each item per property.
+- **Locations** — where stock is held.
+
+## Moving stock
+
+Every change in quantity is a recorded **movement**, so you always know why a number changed:
+
+- **Stock in** — receive stock. SaltCollections updates the **weighted-average cost** automatically.
+- **Stock out** — consume or discard stock.
+- **Transfer** — move stock between properties/locations.
+- **Movements** — the full history over time.
+
+## Minibar
+
+**Minibar** tracks in-room consumables tied to bookings, so guest consumption flows into the right room and gets charged/costed correctly.
+
+## Cycle counts
+
+Keep records honest with periodic counts:
+
+1. Go to **Cycle count → New**.
+2. Count the physical stock for the selected items/location.
+3. Enter the counts — SaltCollections shows variances against the system quantity.
+4. Confirm to adjust.
+
+## Purchase orders
+
+Under **Purchase orders → New**, raise a PO to a vendor, then receive it into stock when it arrives (which becomes a stock-in movement).
+
+## Assets & valuation
+
+Beyond consumables, SaltCollections handles **assets**:
+
+- **Asset catalog** and **assets** — furniture, appliances, equipment per property.
+- **Depreciable** — assets that amortize over time, tracked by status (*In stock*, *In use*, *Fully amortized*, *Written off*) with current book value and a **report damage** action.
+- **Valuation** — total worth by category: stock value + depreciable-asset value + fixed-asset value.
+- **ABC analysis** — a Pareto ranking that tags items **A / B / C** by consumption value, so you focus on what matters.
+
+## Alerts
+
+**Stock alerts** flags items that are out or near their minimum threshold, so you reorder before you run dry. These also surface in [Notifications](/docs/operations/notifications).
+
+<Callout type="tip" title="Set thresholds">
+Alerts only fire if items have a **default minimum stock** (and, ideally, a **default reorder quantity**) set. Configure these when you create an item so the reorder scan has something to compare against.
+</Callout>

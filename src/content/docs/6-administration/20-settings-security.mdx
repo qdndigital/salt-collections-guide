@@ -1,0 +1,45 @@
+---
+title: Settings, security & audit
+description: System settings, profile, two-factor, and the audit log of every change.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+This page covers the account and system controls under **Settings**, **Profile** and **Audit Log**.
+
+## Profile settings
+
+Open the **account menu → Profile settings** to manage your own account:
+
+- Name and contact details.
+- **Language** (English / Vietnamese) — saved to your account.
+- **Password** — change it here.
+- **Two-factor authentication** — see [Signing in](/docs/getting-started/signing-in).
+
+## System settings
+
+Admins configure organization-wide behaviour under **Settings**, including:
+
+- **Two-factor** policy.
+- **Approval thresholds** for expenses and payouts.
+- Connection and defaults used across the app.
+
+## Audit log
+
+Every meaningful change in SaltCollections is recorded. **Audit Log** shows *who* did *what*, *when* — the user, the affected record, and the before/after values.
+
+![The Audit Log](/assets/sc-audit-logs.png)
+
+Use it to:
+
+- Investigate an unexpected change.
+- Confirm who approved a payout or edited an expense.
+- Satisfy compliance and internal-control requirements.
+
+<Callout type="note" title="Records are retained, not erased">
+Important records aren't deleted outright — instead they carry a **status** (e.g. an expense is *rejected* or *voided*) and can be **locked**, so the history stays intact. Combined with the audit log, you always have a full trail.
+</Callout>
+
+<Callout type="warning" title="Security hygiene">
+Enable 2FA for every admin and accountant, keep approval thresholds sensible, and review the audit log periodically. These three habits prevent most finance-system incidents.
+</Callout>

@@ -1,0 +1,47 @@
+---
+title: Signing in
+description: Log in, set up two-factor authentication, and recover a forgotten password.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+You reach SaltCollections through your organization's web address. An administrator creates your account and sends an invite — you don't sign up yourself.
+
+![The SaltCollections sign-in screen](/assets/sc-login.png)
+
+## Sign in
+
+1. Open the SaltCollections URL your admin gave you.
+2. Enter your **email** and **password**.
+3. Tick **Remember me** on a trusted device to stay signed in longer.
+4. Select **Sign in**.
+
+If two-factor authentication is enabled on your account, you'll then be asked for a **6-digit code** from your authenticator app.
+
+## Two-factor authentication (2FA)
+
+2FA adds a second step at login using an authenticator app (Google Authenticator, Authy, 1Password, etc.).
+
+1. Go to **Settings → Two-factor**.
+2. Scan the QR code with your authenticator app — or type the **manual secret key** shown next to it.
+3. Enter the 6-digit code to confirm and enable it.
+
+<Callout type="warning" title="Don't lose your authenticator">
+There are no printed backup codes. If you lose access to your authenticator app, an administrator has to reset 2FA on your account before you can sign in again.
+</Callout>
+
+## Changing your password
+
+While signed in, change your password anytime under **account menu → Profile settings → Password**: enter your **current** password and a **new** one.
+
+## Forgot your password
+
+<Callout type="warning" title="Email reset isn't live yet">
+The **Forgot password?** screen exists, but the reset **email is not sent yet** — so you won't receive a link. Don't rely on it to get back in. Instead, ask an administrator to reset your password (below).
+</Callout>
+
+If you're **locked out**, contact an administrator. They open your account under **Users**, choose **Reset password**, and the system generates a **temporary password shown once** — they pass it to you, then you sign in and change it under **Profile settings**.
+
+## Signing out
+
+Open the **account menu** (top-right / bottom of the sidebar) and select **Sign out**. Always sign out on shared computers.

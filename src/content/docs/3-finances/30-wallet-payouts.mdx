@@ -1,0 +1,66 @@
+---
+title: Wallet, balances & payouts
+description: Track cash accounts, reconcile, follow owner balances, and pay owners out through an approval flow.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+The **Wallet & Balance** area is where the money actually moves: your cash and bank accounts, reconciliation against statements, and the balances you owe property owners.
+
+## Wallet accounts
+
+Under **Wallet → Accounts**, set up each place money sits. Accounts can be a **Cash**, **Bank**, **E-wallet**, **Payment gateway**, **Credit card** or **Other** type. Create one with **New account**; open an account to see its running balance and transactions.
+
+![Wallet accounts with balances](/assets/sc-wallet.png)
+
+### Reconciliation
+
+Match SaltCollections' record against your real bank/cash statement:
+
+1. Open the account and select **Reconcile**.
+2. Pick the period and tick off the transactions that appear on your statement.
+3. Compare the **expected closing balance** with the **statement balance** and resolve any difference before finishing.
+
+Reconciling regularly is what keeps the wallet trustworthy.
+
+### Cash flow
+
+**Wallet → Cash flow** shows money in vs money out over time across accounts — your liquidity picture at a glance.
+
+## Owner balances
+
+**Owner balances** is what you owe each owner, derived from their **[contract](/docs/properties-bookings/properties)** terms against actual revenue and expenses. You don't add these by hand — use the **Compute period** action to build a balance for a period. A balance moves through *Draft → Finalized → Partially paid → Paid out*. Only a **Finalized** balance with an outstanding amount can be paid.
+
+## Owner payouts
+
+![Owner payouts list with statuses](/assets/sc-payouts.png)
+
+When a balance is finalized and outstanding, pay the owner:
+
+1. Go to **Payouts** and select **Create payout** (or start from an owner balance).
+2. Choose the **owner balance** and the **account to pay from**.
+3. Enter an **amount** — leave blank to pay the full outstanding balance.
+4. Set the **scheduled date**, add notes, and submit.
+
+<Callout type="note" title="Owner needs bank details">
+A payout can only target an owner who has **bank details** on file. If the balance option is greyed out as "missing bank", add the owner's bank account first.
+</Callout>
+
+### The payout lifecycle
+
+A payout is deliberately multi-step so money doesn't leave without sign-off:
+
+1. **Propose** — you create it (status *Proposed*).
+2. **Approve** — an authorized user approves it (*Approved*).
+3. **Mark processing** — the transfer is being made (*Processing*).
+4. **Mark paid** — confirm it landed. This requires a **transfer reference** (and optionally a proof attachment). → *Paid*.
+
+From *Processing* you can instead **Mark failed** if the transfer bounces. You can **Cancel** at any point before it's paid.
+
+<Callout type="tip" title="Approval thresholds">
+Large payouts and expenses can require sign-off. Admins set the limits under **Settings → Approval thresholds**.
+</Callout>
+
+<Callout type="note">
+Owners can watch their own balances and payout history in the [Owner Portal](/docs/owner-portal/overview) — no need to email statements around.
+</Callout>

@@ -1,0 +1,48 @@
+---
+title: GoHost sync
+description: Connect GoHost, map entities, watch sync status, and handle conflicts.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+SaltCollections integrates with the **GoHost** PMS to pull in bookings and revenue automatically, so you never key reservations twice. Everything sync-related lives under **GoHost Sync**.
+
+## Connecting GoHost
+
+Under **GoHost Sync → Settings** ("GoHost Connection"), enter the connection details from your GoHost account:
+
+- **API Key** — your GoHost public API key.
+- **Base URL** — the GoHost API endpoint.
+- **Sync interval (minutes)** — how often SaltCollections checks for new data.
+
+Use **Test Connection** to confirm the key works before you **Save Connection**.
+
+![The GoHost Connection settings screen](/assets/sc-sync-settings.png)
+
+<Callout type="warning" title="Admin task">
+Connecting GoHost is a one-time administrator setup. The API key is sensitive — treat it like a password and only give sync access to trusted admins.
+</Callout>
+
+## Entity mapping
+
+GoHost's properties and channels need to line up with yours. Under **Mapping**, match each GoHost **property** and **channel** to its SaltCollections counterpart. Correct mapping is what lets revenue land on the right P&L — and stops bookings falling into [Booking review](/docs/properties-bookings/bookings).
+
+## Sync status & logs
+
+The main **GoHost Sync** screen shows the live picture:
+
+- A **worker status** badge — *running* or *stopped*.
+- A **Sync now** button to trigger a run on demand, with real-time progress.
+- Status cards — total bookings, conflict count, and consecutive failures.
+
+**Logs** list every sync run — open one to see exactly what was pulled and any errors.
+
+## Conflicts
+
+When GoHost and SaltCollections disagree about a booking — different amount, dates or status — it appears under **Conflicts** as a read-only list, so you can see what diverged.
+
+You resolve a conflict from the **booking's own page**: open it and **Lock** it once the correct version is in place, which stops the next sync overwriting it. See [the booking record](/docs/properties-bookings/bookings).
+
+<Callout type="tip" title="Sync healthy?">
+If the dashboard looks stale, check the **worker status** badge and the latest entry under **Logs**. A stopped worker or a failed run is usually the cause — most often an expired API key or a newly added GoHost property that isn't mapped yet.
+</Callout>

@@ -1,0 +1,65 @@
+---
+title: Properties, owners & contracts
+description: Build your property tree — companies, buildings, properties, rooms — and link owners with contracts.
+updated: 2026-07-17
+---
+import Callout from '../../../components/Callout.astro';
+
+Everything in SaltCollections hangs off your **property structure**. Setting it up correctly once means revenue, expenses and reports all attribute themselves to the right place.
+
+## The structure
+
+```
+Company            legal entity that owns/operates
+  └─ Building       physical address (a block of rooms)
+      └─ Property   a rentable unit (villa, apartment, room set)
+          └─ Room   individual bookable room
+```
+
+You don't have to use every level — a single villa can be one property with one room. Larger operators map buildings with many properties and rooms.
+
+## Companies
+
+Under **Companies**, add each legal entity you operate. Companies own contracts and appear on invoices and reports. Create one with **Add company**.
+
+## Buildings
+
+**Buildings** hold the physical address and group properties that sit at one location. Useful for shared costs (electricity, cleaning) that you later split across the units inside.
+
+## Properties & rooms
+
+![The Properties list](/assets/sc-properties.png)
+
+Under **Properties**, select **Add property** and set its name, type, building and owner. Open a property to:
+
+- **Edit** its details.
+- Manage its **Rooms** — add, edit, and set per-room attributes used by P&L-by-room.
+
+## Owners
+
+Third-party **Owners** are the people whose properties you manage. Under **Owners → New owner**, capture their contact details. From an owner's record you can:
+
+- See their properties and balances.
+- Select **Send Owner Portal invite** to give them self-service access — see the [Owner Portal](/docs/owner-portal/overview).
+
+## Contracts
+
+A **Contract** defines the money arrangement between an owner and a property — how much of the revenue they get, and when they're paid.
+
+1. Go to **Contracts → New contract**.
+2. Pick the **owner** and **property**, and give it a **contract number**.
+3. Choose the **contract type** — *Revenue share*, *Profit share*, *Fixed rent* or *Hybrid* — and set the terms. The fields shown depend on the type:
+   - **Owner share (%)** — the revenue/profit split.
+   - **Fixed amount (VND/month)** — a flat monthly figure.
+   - **Minimum guaranteed** — a floor the owner is promised per period.
+4. Set the **start/end dates**, **payout frequency** and **payout day of month**.
+5. Add **notes** and optionally attach the signed **contract file (PDF)**.
+
+<Callout type="tip" title="Contracts drive payouts">
+The contract terms feed **owner balances** and **payouts** automatically. Get the share percentage and payout schedule right and the finance side largely runs itself.
+</Callout>
+
+## Channels, categories & vendors
+
+- **Channels** — your distribution sources (Airbnb, Booking.com, direct…). Bookings carry a channel so the dashboard can show revenue mix.
+- **Categories & Vendors** — expense categories and the suppliers you buy from, reused across every expense.
